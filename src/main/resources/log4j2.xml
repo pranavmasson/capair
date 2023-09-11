@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+	<Appenders>
+		<Console name="consoleLogger" target="SYSTEM_OUT">
+			<PatternLayout	pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} %c{1} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.capair.api" level="TRACE" additivity="true">
+		</Logger>
+		<Logger name="org.springframework" level="WARN" additivity="true">
+		</Logger>
+		<Logger name="org.springframework.web" level="WARN" additivity="true">
+		</Logger>
+		<Root level="WARN" additivity="false">
+			<appender-ref ref="consoleLogger" />
+		</Root>
+	</Loggers>
+</Configuration>
